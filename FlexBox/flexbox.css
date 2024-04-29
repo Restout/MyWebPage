@@ -1,0 +1,104 @@
+.flexbox{
+  display: flex;
+  box-sizing: content-box;
+  justify-content:space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.box{
+  display: flex;
+  box-sizing: content-box;
+}
+
+.first_letter{
+  display: flex;
+  box-sizing: content-box;
+}
+.second_letter{
+display: flex;
+  box-sizing: content-box;
+  left:70px;
+}
+
+.content {
+  position: relative;
+  min-height: 200px;
+}
+
+.box {
+  border: #700d0d 10px smooth;
+  background-color:aliceblue;
+}
+
+.first_letter {
+  font-size: 190px;
+  fill: #151515;
+  font-family: Tahoma, sans-serif;
+  font-weight: bold;
+  stroke: #700d0d;
+  stroke-width: 3px;
+}
+
+.second_letter {
+  font-size: 190px;
+  fill: #151515;
+  font-family: Tahoma, sans-serif;
+  font-weight: bold;
+  stroke: #700d0d;
+  stroke-width: 3px;
+}
+
+.text {
+  font-size: 14px;
+  fill: #d50e0e;
+  font-family: Tahoma, sans-serif;
+  opacity: 0%;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.box:active .text {
+  opacity: 100%;
+}
+
+.box:active .first_letter{
+  filter: drop-shadow(10px 10px 3px #330f0f);
+  transform: scale(0.5) translate(3px, 180px);
+  transition: transform 1s;
+}
+
+.box:active .second_letter{
+  filter: drop-shadow(10px 10px 3px #330f0f);
+  transform: scale(0.5) translate(180px, 1px);
+  transition: transform 1s ;
+}
+
+.box:active {
+  background: url(../images/img1.jpg);
+  background-size: cover;
+  background-position: center; 
+  animation: shake 1s infinite;
+}
+
+@keyframes shake{
+0% {transform: translateX(10px)}
+25%  {transform: translateX(-10px)}
+50%  {transform: translateX(10px)}
+75%  {transform: translateX(-10px)}
+100% {transform: translateX(10px)}
+}
+
+.box .animatedElement{
+  opacity: 0%;
+}
+
+.box:hover .animatedElement {
+  opacity: 100%;
+}
+
+.box:active .animatedElement {
+  opacity: 0%;
+}
+
+
+

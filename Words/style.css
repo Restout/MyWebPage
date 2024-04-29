@@ -1,0 +1,73 @@
+#main_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#top_container {
+    position: relative;
+    border: 5px solid red;
+    width: 100%;
+    max-height: 70%;
+    min-height: 10vh;
+}
+
+#left_container {
+    position: relative;
+    flex-wrap: wrap;
+    box-shadow: inset 0 0 10px red, 0 0 5px blue;
+    width: 30%;
+    min-height: 70%;
+    margin-top: 1%;
+}
+
+#right_container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid black;
+    width: 69%;
+    height: 70%;
+    margin-top: 1%;
+}
+
+#input {
+    margin: 5%;
+    width: 60%;
+    height: 10%;
+    font-size: 100%;
+}
+
+#parseBtn {
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 2.5vw;
+    text-align:center;
+    word-break: break-all;
+    margin-top: 5%;
+    width: 20%;
+    height: 10%;
+}
+
+.element {
+    display: inline-block;
+    position: absolute;
+    font-size: 2em;
+    text-align:center;
+    overflow: hidden;
+    border: 3px solid black;
+    background-color: #EFEFEF;
+    max-width: 20%;
+}
+
+#output {
+    word-break: break-all;
+    border: 3px solid black;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    width: 60%;
+    min-height: 10vh;
+    font-size: 2em;
+}
+#top_container > .element {
+    position: relative; 
+    margin: 2%; 
+}

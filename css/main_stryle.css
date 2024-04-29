@@ -1,0 +1,210 @@
+html{
+  box-sizing: border-box;
+}
+*,*::after,*::before{
+  box-sizing: inherit ;
+  margin:0;
+  padding: 0;
+}
+
+ul{
+  list-style: none;
+
+}
+li{
+  max-width: 250px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+  font-family: "Inter", sans-serif;
+  font-size: 16;
+  font-weight: 400;
+}
+
+.header{
+  background-color:#151515
+}
+
+
+html,body{
+  height: 100%;
+}
+.wrapepr{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container{
+max-width:1220px;
+margin: 0 auto;
+padding: 0 10px;
+}
+
+.logo_img{
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
+
+.header_iner{
+  padding-top: 20px;
+  padding-bottom: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.menu_list{
+  display: flex;
+  gap:35px;
+  padding-bottom: 30px;
+
+}
+
+.menu_list_link{
+  color: white;
+  text-transform: uppercase;
+
+}
+
+.images_content{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.images_item{
+  max-width: 300px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+.content_image,.achivement_image{
+  box-sizing:content-box;
+  margin-top: 20px;
+  max-width: 300px;
+  max-height: 300px;
+  border-color: #151515;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.footer{
+  flex: 0 0 auto;
+  background-color: #151515;
+  padding: 50px 0 32px;
+  color:white;
+}
+
+.footer_menu{
+  display: flex;
+  gap: 35px;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  padding-top:5px;
+  align-items:flex-end;
+}
+
+.footer_menu_item_img{
+  max-width: 30px;
+  max-height:30px;
+}
+.footer_menu_item_link{
+  color: white;
+  text-transform: uppercase;
+  padding-bottom: 20;
+}
+.footer_menu_item{
+  align-items: flex-end;
+}
+.main{
+  height: 3000;
+  padding-bottom: 1000;
+  flex-grow: 1;
+}
+
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  font-style: bold;
+  font-size: 44px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo_container{
+  box-sizing:content-box;
+  display:flex;
+  flex-direction:column ;
+  width: 80px;
+  height: 80px; 
+  margin-top:10px;
+}
+.logo span {
+  display:flex;
+  height:35px;
+  text-align: right;
+  margin-bottom:1;
+}
+
+.main_container,.achivement_container{
+  max-width: 450px;
+  font-size: 16px;
+  font-weight: 400;
+  border-color: #151515;
+  border-radius: 10px;
+  border-style: solid;
+  margin-top: 20px;
+margin-bottom: 20px;
+ margin-left: 10px;
+ margin-right: 10px;
+}
+.main_image{
+  max-width: 100px;
+  float: left;
+  margin: 7px 7px 7px 7px;
+}
+.main_inner{
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  gap:20px;
+}
+
+.achivement_header,.content_price,.content_title{
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.hakaton_container,.gor_container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (max-width:700px){
+  .main_inner,.images_content,.menu_list,.header_iner{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    gap:20px;
+  }
+}
+
