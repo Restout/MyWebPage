@@ -1,0 +1,99 @@
+.menu {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1em;
+    color: var(--color-dimgray-200);
+    font-family: var(--font-inter); 
+    gap: 4em;
+    background-color: var(--others-white);
+    z-index: 1;
+    background-color:#151515
+
+}
+
+.nav {
+    top: 16px;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4em;
+}
+
+@media (max-width: 950px) {
+    .menu {
+        height: fit-content;
+        gap: 0;
+    }
+    .nav {
+        flex-direction: column;
+        gap: 1em;
+        align-items: start;
+    }
+}
+
+.tab {
+    line-height: 26.74px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    color: var(--color-dimgray-200);
+}
+
+.tab:visited {
+    text-decoration: none;
+    color: var(--color-dimgray-200);
+}
+
+.lessons {
+    display: flex;
+    flex-direction:column;    
+    margin-right: 10%;
+    position: relative;
+}
+
+.lessons input, .lessons ul {
+    display: none;
+}
+
+
+.lessons_conteiner {
+    display: flex;
+    flex-direction:column;
+    border-radius: 16.17px;
+    background-color: var(--color-gray-600);
+    padding: 16.1721248626709px 24.258188247680664px;
+}
+
+.lessons label {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--others-white);
+}
+
+
+content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin-bottom: 70px;
+    min-height: 200px;
+} 
+
+
+#square {
+    width: 100px;
+    height: 100px;
+  }

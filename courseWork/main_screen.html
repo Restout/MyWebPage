@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./game_css/logo.css">
+    <link rel="stylesheet" href="./game_css/global.css">
+    <link rel="stylesheet" href="./game_css/styles.css">
+    <link rel="stylesheet" href="./game_css/main_screen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    </link>
+    <title>Game</title>
+</head>
+
+<body>
+    <header class="menu">
+        <nav class="nav">
+            <div class="name_of_game">Игра "Найди слова"</div>
+        </nav>
+        <div class="lessons">
+            <button class="history_button" onclick="toggleTheme()">Переключение темы</button>
+        </div>
+        <div class="game_header">
+            <div class="row">
+                <a href="login_screen.html">
+                    <div id="user_name" class="text_button">
+                        <i class="fas fa-fw fa-user"></i>
+                        user name
+                    </div>
+                </a>
+                <div class="spacer"></div>
+                <div class="text_button">
+                    <i class="fas fa-fw fa-gear"></i>
+                    Игры:
+                </div>
+                <form id="mode_form">
+                    <input type="radio" id="sinonim" name="mode" value="sinonim" checked>
+                    <label class="text_button" for="sinonim">
+                        <i class="fas fa-fw fa-smile"></i> 
+                        Синонимы
+                    </label>
+
+                    <input type="radio" id="trace" name="mode" value="trace">
+                    <label class="text_button" for="trace">
+                        <i class="fas fa-fw fa-meh-blank"></i> 
+                        Сопоставления
+                    </label>
+
+                    <input type="radio" id="blitz" name="mode" value="blitz">
+                    <label class="text_button" for="blitz">
+                        <i class="fas fa-fw fa-smile"></i> 
+                        Блиц!
+                    </label>
+                </form>
+                <div class="text_button">
+                    <i class="fas fa-fw fa-gear"></i>
+                    СЛОЖНОСТЬ:
+                </div>
+                <form id="level_form">
+                    <input type="radio" id="easy_level" name="level" value="easy_level" checked>
+                    <label class="text_button" for="easy_level">
+                        <i class="fas fa-fw fa-smile"></i> 
+                        1
+                    </label>
+
+                    <input type="radio" id="normal_level" name="level" value="normal_level">
+                    <label class="text_button" for="normal_level">
+                        <i class="fas fa-fw fa-meh-blank"></i> 
+                        2
+                    </label>
+
+                    <input type="radio" id="hard_level" name="level" value="hard_level">
+                    <label class="text_button" for="hard_level">
+                        <i class="fas fa-fw fa-tired"></i>
+                        3
+                    </label>
+                </form>
+                
+            </div>
+        </div>
+
+      
+       
+    </header>
+    <content id="content">
+        <div class="game_content">
+            <div class="description"> </div>
+            <div id="game_rules"></div>
+            <div id="game_text"></div>
+            <div id="standart_print"></div>
+            <div id="list_of_prints"></div>
+        </div>
+    </content>
+    <script src="./game_js/theme.js"></script>
+    <script src="./game_js/consts.js"></script>
+    <script src="./game_js/print.js"></script>
+    <script src="./game_js/game_settings.js"></script>
+    <script src="./game_js/game.js"></script>
+    <script src="./game_js/init_game.js"></script>
+</body>
+
+</html>

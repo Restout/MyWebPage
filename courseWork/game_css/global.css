@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    line-height: normal;
+    font-size: 18px;
+    min-width: 480px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--others-white);
+    color: var(--color-gray-600);
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf)
+}
+
+@font-face {
+    font-family: Georgi;
+    src: url(../fonts/Geologica-VariableFont_CRSV,SHRP,slnt,wght.ttf)
+}
+
+:root {
+    --caption-2: Georgi;
+    --font-inter: Inter;
+    --color-dimgray-100: #676767;
+    --color-silver-200: #c2c3cb;
+    --color-dimgray-200: #606060;
+    --color-gray-600: #141416;
+    --others-white: #fff;
+    --color-gray-300: #818181;
+    --color-gray-500: #444444;
+    --color-yellow: #e2b714;
+}
+
+.darkTheme {
+    --others-white: #333;
+    --color-gray-600: #f4f4f4;
+    --color-gray-300: #141416;
+}

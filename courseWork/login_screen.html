@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./game_css/logo.css">
+    <link rel="stylesheet" href="./game_css/global.css">
+    <link rel="stylesheet" href="./game_css/styles.css">
+    <link rel="stylesheet" href="./game_css/main_screen.css">
+    <link rel="stylesheet" href="./game_css/login_screen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    </link>
+    <title>Game</title>
+</head>
+
+<body>
+    <header class="menu">
+        <nav class="nav">
+            <a href="../../index.html" class="logo-container">
+                
+            </a>
+            <div class="name_of_game">Игра "Найди слова"</div>
+        </nav>
+        <div class="lessons">
+            <button class="history_button" onclick="toggleTheme()">Переключение темы</button>
+        </div>
+    </header>
+    <content id="content">
+        <div class="game_header">
+            <form id="usernameForm">
+                <label for="username">Введите ваше имя:</label>
+                <input type="text" id="username" name="username" required>
+                <button class="submit_button" type="submit">Отправить</button>
+            </form>
+            <a href="history_screen.html">
+                <div class="history_button">
+                    История игр
+                </div>
+            </a>
+        </div>
+    </content>
+    <script src="./game_js/theme.js"></script>
+    <script src="./game_js/login_screen.js"></script>
+</body>
+
+</html>
