@@ -99,6 +99,8 @@ class Game {
 class GameBlitz extends Game {
     constructor(level) {
         super(level);
+        this.plusScore=5;
+        this.minusScore=-2;
     }
   
     showGame(){
@@ -110,6 +112,24 @@ class GameBlitz extends Game {
         let answers=currentQuestion.slice(1,4);
         this.gameRules.appendChild(this.addRules(question));
         this.gameText.appendChild(this.createText(answers,correctAnswer));
+        switch (this.level) {
+            case GAME_LEVEL.EASY:
+                this.plusScore=5;
+                this.minusScore=-2;
+                this.timeStart = Date.now() + (30 * 1000);
+                break;
+            case GAME_LEVEL.NORMAL:
+                this.plusScore=7;
+                this.minusScore=-4;
+                this.timeStart = Date.now() + (20 * 1000);
+
+                break;
+            case GAME_LEVEL.HARD:
+                this.plusScore=10;
+                this.minusScore=-6;
+                this.timeStart = Date.now() + (10 * 1000);
+                break;
+        }
     }
 
      createText(answers, correctAnswer) {
@@ -158,7 +178,7 @@ class GameBlitz extends Game {
       wordElement.style.transition = 'transform 1s, opacity 1s'; 
       wordElement.style.transform = 'translateY(-100px)'; 
       wordElement.style.opacity = '0'; 
-      this.score = this.score + this.coefficient * 40;
+      this.score = this.score + this.plusScore;
       console.log(this.score);
       this.scoreBlock.textContent = "Очки: " + this.score;
       setTimeout(() => {
@@ -178,7 +198,7 @@ class GameBlitz extends Game {
         wordElement.style.transform = 'scale(2)'; // Увеличиваем размер в 2 раза
         wordElement.style.transition = 'all 0.3s'; // Добавляем плавность анимации
         wordElement.style.animation = 'shake 0.5s'; // Применяем анимацию "дергания"
-        this.score=this.score-5;
+        this.score=this.score+this.minusScore;
         this.scoreBlock.textContent = "Очки: " + this.score;
           // Возвращаем слово к исходному состоянию после небольшой задержки
         setTimeout(() => {
