@@ -134,12 +134,15 @@ class GameBlitz extends Game {
 
      createText(answers, correctAnswer) {
         const divElement = document.createElement('div');
-      
+      var counter=0;
         answers.forEach(word => {
           const spanElement = document.createElement('span');
           spanElement.className='answer';
+          spanElement.id=counter;
+          counter++;
           spanElement.textContent = word;
           spanElement.style.cursor = 'pointer';
+          spanElement.draggable=true;
           // Проверяем, является ли слово корректным
          
           if (correctAnswer==word) {
@@ -147,12 +150,48 @@ class GameBlitz extends Game {
           } else {
             spanElement.addEventListener('click', () => this.handleRegularWordClick(spanElement));
           } 
+          spanElement.addEventListener('dragstart', function(event) {
+            // Сохраняем идентификатор перетаскиваемого элемента
+            event.dataTransfer.setData('text/plain', event.target.id);
+          });
 
         spanElement.addEventListener("dragenter", handlerDragenter);
         spanElement.addEventListener("dragover", handlerDragover);
           divElement.appendChild(spanElement);
           divElement.appendChild(document.createTextNode(' '));
         });
+
+        const answerElement=document.createElement('div');
+        answerElement.className='answerContainer';
+        answerElement.addEventListener('dragover', function(event) {
+            // Предотвращаем действие по умолчанию, чтобы разрешить сброс
+            event.preventDefault();
+          });
+
+        answerElement.addEventListener('drop', (event)=>{
+            event.preventDefault();
+            const droppedElementId = event.dataTransfer.getData('text/plain');
+            const wordElement = document.getElementById(droppedElementId);
+            answerElement.appendChild(wordElement);
+            wordElement.style.position = 'initial';
+if(correctAnswer==wordElement.textContent){
+    console.log('Корректное слово: ' + wordElement);
+    console.log(this.score);
+    setTimeout(() => {
+      wordElement.remove();
+          if(this.lvl==5){
+          this.isEnd=true;
+          }else{
+              this.lvl++;
+              }
+          this.running();
+    }, 1000);
+}else{
+ this.handleRegularWordClick(wordElement);
+} });
+          
+          divElement.appendChild(answerElement);
+
           return (divElement);
       }
 
